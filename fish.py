@@ -3,20 +3,20 @@ import random
 
 
 class Fish:
-    def __init__(self, x, y, speed, size_x, size_y, color):
-        self.x = x
-        self.y = y
-        self.speed = speed
-        self.size_x = size_x
-        self.size_y = size_y
-        self.color = color
+    def __init__(self,x,y,speed,size_x,size_y,color):
+        self.x=x
+        self.y=y
+        self.speed=speed
+        self.size_x=size_x
+        self.size_y=size_y
+        self.color=color
 
-    def move(self, width):
-        self.x += self.speed
-        if self.x > width or self.x < 0:
-            self.speed *= -1
+    def move(self,width):
+        self.x+=self.speed
+        if self.x>width or self.x< 0:
+            self.speed*= -1
 
-    def draw(self, screen):
+    def draw(self,screen):
         fx, fy, fsx, fsy = self.x, self.y, self.size_x, self.size_y
         fs = self.speed
         fc = self.color

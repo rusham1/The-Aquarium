@@ -10,15 +10,15 @@ pygame.display.set_caption("The Aquarium")
 
 clock = pygame.time.Clock()
 
-# Rocks and Fish
+#for rocks and plants
 rocks = generate_rocks()
 
 plants = generate_plants()
 
 
 
-# Generate a list of random fish
-fishes = [generate_random_fish(WIDTH, HEIGHT) for _ in range(10)]  # You can adjust the number
+#list of random fishes
+fishes = [generate_random_fish(WIDTH, HEIGHT) for _ in range(8)]  
 
 
 running = True
@@ -27,10 +27,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((0, 100, 200))  # Aqua blue
+    screen.fill((0, 100, 200))  #aquarium color, aqua blue
 
-    draw_plants(screen, plants)  # Draw plants first (background)
-    draw_rocks(screen, rocks)    # Then rocks (foreground)
+    draw_plants(screen, plants)  #for background plants
+    draw_rocks(screen, rocks)    #for foreground rocks
 
     for fish in fishes:
         fish.move(WIDTH)
